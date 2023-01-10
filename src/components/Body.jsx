@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Body() {
   return (
     <Container>
-      
+      body
     </Container>
   )
 }

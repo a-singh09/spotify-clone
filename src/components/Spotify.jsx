@@ -1,13 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from "styled-components";
+import axios from "axios";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import Body from "./Body";
 import Footer from "./Footer";
 import { useStateProvider } from "../utils/StateProvider";
+import { reducerCases } from '../utils/Constants';
 
 function Spotify() {
-  const [{token}, dispatch] = useStateProvider()
+  const [{token}, dispatch] = useStateProvider();
 
   useEffect(() => {
     
@@ -20,8 +22,13 @@ function Spotify() {
         },
       }
       )
+      const userInfo = {
+        userId: data.id,
+        userName: data.display_name
+      }
+      dispatch({type: reducerCases.SET_USER, userInfo})
     }
-
+    getUserInfo();
   }, [dispatch, token])
   
   return (

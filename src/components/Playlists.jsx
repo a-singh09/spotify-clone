@@ -18,10 +18,11 @@ function Playlists() {
                 }
             );
             const { items } = response.data;
+            console.log(items);
             const playlists = items.map(({ name, id }) => {
                 return { name, id };
             });
-
+            console.log(playlists);
             dispatch({ type: reducerCases.SET_PLAYLISTS, playlists });
         };
         getPlaylistData();

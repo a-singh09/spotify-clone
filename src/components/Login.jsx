@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const handleClick = () => {
     const clientId = "418b6247798044518e3d5b0f6103a35d";
-    const redirectUrl = "https://a-singh09-laughing-space-goggles-6x9pr45pvgq249pp-3000.preview.app.github.dev/";
+    const redirectUrl = "http://localhost:3000/";
     const apiUrl = "https://accounts.spotify.com/authorize";
 
     const scope = [
@@ -14,7 +14,9 @@ const handleClick = () => {
         "user-read-currently-playing",
         "user-read-recently-played",
         "user-read-playback-position",
-        "user-top-read"
+        "user-top-read",
+        "playlist-read-private",
+        "playlist-read-collaborative"
     ];
     window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${redirectUrl}&scope=${scope.join(
         " "

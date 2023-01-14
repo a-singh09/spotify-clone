@@ -4,12 +4,12 @@ import {FaSearch} from "react-icons/fa";
 import {CgProfile} from "react-icons/cg";
 import { useStateProvider } from "../utils/StateProvider";
 
-function Navbar() {
+function Navbar({navBackground}) {
 
   const [{userInfo}] = useStateProvider();
 
   return (
-    <Container>
+    <Container navBackground={navBackground}>
       <div className="search_bar">
         <FaSearch />
         <input type="text" placeholder='Songs, Artists, Podcasts'/>

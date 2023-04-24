@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const handleClick = () => {
     const clientId = "418b6247798044518e3d5b0f6103a35d";
-    const redirectUrl = "http://localhost:3000/";
+    const redirectUrl = "https://spotify-clone-e4ar.onrender.com/";
     const apiUrl = "https://accounts.spotify.com/authorize";
 
     const scope = [

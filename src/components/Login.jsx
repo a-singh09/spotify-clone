@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 
 const handleClick = () => {
-    const clientId = "418b6247798044518e3d5b0f6103a35d";
+    const clientId = "f449cbc4a14e4cd6a83a831db04b5965";
     const redirectUrl = "https://spotify-clone-e4ar.onrender.com/";
     const apiUrl = "https://accounts.spotify.com/authorize";
 
